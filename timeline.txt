@@ -1,0 +1,33 @@
+2017/9/28
+发现了一个很神奇的事情 ： 原来只要把 python导入到环境变量path中 然后再用octave可以运行python中的一些库
+并且会打开python python的部分功能octave也可以用 这个交互好妙啊！！！！
+
+
+比如 ：
+
+
+>> pkg load symbolic
+>> syms l
+OctSymPy v2.6.0: this is free software without warranty, see source.
+Initializing communication with SymPy using a popen2() pipe.
+Some output from the Python subprocess (pid 15748) might appear next.
+Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> >>>
+OctSymPy: Communication established.  SymPy v1.1.1.
+Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:57:36) [MSC v.1900 64 bit (AMD64)]
+>> a = [1,2,3]
+a =
+
+   1   2   3
+
+>> a = [1 2 3]
+a =
+
+   1   2   3
+
+>> a = [1 2 3; 4 5 6]
+a =
+
+   1   2   3
+   4   5   6
